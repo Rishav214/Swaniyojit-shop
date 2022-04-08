@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Swaniyojit-Shop</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+	
+	<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+	<script type="text/javascript" src="jquery-3.2.1.js"></script>
+	<script type="text/javascript" src="script.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<!--- sass styling --->
+	<link rel="stylesheet" type="text/css" href="./scss/homepageStyles.css">
+</head>
+<body>
+	
+	<button onclick="topFunction()" id="myBtn" title="Go to top" width="35px" height="35px" align="right">⇑</button>
+	
+		<nav class="navbar navbar-toggleable-md navbar-light bg-faded" id="nav-main">
+	  		<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+	    		<span class="navbar-toggler-icon"></span>
+	  		</button>
+	  		<a class="navbar-brand" href="#" style="padding-left: 12vw; font-size: 30px;">Swaniyojit-Shop</a>
+	  		<div class="collapse navbar-collapse" id="navbarNav" style="padding-left: 33vw;" >
+	    		<ul class="navbar-nav nav-ul">
+	      			<li class="nav-item" >
+	        			<a class="nav-link" href="#">Products <span class="sr-only">(current)</span></a>
+	      			</li> 
+			      <li class="nav-item">
+			        	<a class="nav-link" href="#cartmain">Cart</a>
+			      </li>
+			      <li class="nav-item">
+			      	  <a class="nav-link" href="#about">About</a>
+			      </li>
+	    		</ul>
+	  		</div>
+		</nav>
+	<div class="container-fluid" id="maincontainer">
+		<div align="center" id="row1" class="row">
+			<div class="col-md-4" style="padding-bottom: 15px;">
+				<img src="data:image/jpeg;base64,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">
+				<div id="pro-info">
+					<p class="product-name">Clay Elephant</p><p class="product-price">900</p>
+					<button class="btn btn-secondary" id="btn1">Buy Now</button>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<img src="https://5.imimg.com/data5/NY/LI/MY-2295094/kitchenware-items-500x500.jpg">
+				<div id="pro-info">
+					<p class="product-name">Used Utensils </p><p class="product-price">1000</p>
+					<button class="btn btn-secondary" id="btn2">Buy Now</button>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<img src="https://n1.sdlcdn.com/imgs/j/l/l/crochetin-White-Red-Bengal-Handloom-SDL663381383-1-30023.jpeg">
+				<div id="pro-info">
+					<p class="product-name">Handloom Saree</p>
+					<p class="product-price">1300</p>
+					<button class="btn btn-secondary" id="btn3">Buy Now</button>
+				</div>
+			</div>
+			</div>
+			<div align="center" id="row1" class="row">
+			<div class="col-md-4">
+				<img src="https://qph.cf2.quoracdn.net/main-qimg-1071c827d02682f68ce7799e3d499098.webp">
+				<div id="pro-info">
+					<p class="product-name">Rarely Used Utensils</p><p class="product-price">1200</p>
+					<button class="btn btn-secondary" id="btn4">Buy Now</button>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<img src="https://img1.exportersindia.com/product_images/bc-full/dir_69/2059582/indian-handmade-jewellery-1517908419-3630148.jpg">
+				<div id="pro-info">
+					<p class="product-name">Handmade Jewellery</p><p class="product-price">6000</p>
+					<button class="btn btn-secondary" id="btn5">Buy Now</button>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<img src="https://5.imimg.com/data5/EQ/XI/DC/SELLER-79902389/vintage-highly-decorative-handmade-beautiful-painted-folk-art-iron-pot-i37-50-500x500.JPG">
+				<div id="pro-info">
+					<p class="product-name">Decorative Pot</p><p class="product-price">5500</p>
+					<button class="btn btn-secondary" id="btn6">Buy Now</button>
+				</div>
+			</div>
+			</div>
+	</div>
+
+<div id="cartmain" class="container-fluid">
+	<div class="container" id="cart">
+		<div class="row">
+			<div class="col-md-12" id="cart-heading" align="center">
+				Shopping Cart
+			</div>
+		</div>
+		<hr>
+		<div class="row" id="table-row">
+			<table class="table table-striped" id="item-table">
+			  <thead>
+			    <tr>
+			      <th>Item Id</th>
+			      <th>Product Name</th>
+			      <th>Price</th>
+			      <th>Quantity</th>
+			      <th>Total</th>
+			    </tr>
+			  </thead>
+			  <tbody id="item-table-body">
+
+			  </tbody>
+			</table>
+
+		</div>
+			<div class="row" align="center">
+				<div class="col-md-12">
+					<div>Grand Total : <label id="totalLabel">0</label>
+				</div>
+			</div>
+		</div>
+		<hr>
+
+	</div>
+</div>
+<div id="about" class="container-fluid">	<!-- This div should contain Information about your company -->
+	
+	<div class="row" id="about-row">
+		<div class="col-md-12" align="center">
+		Copyright | Swaniyojit-Prori.TT.que
+		</div>
+	</div>
+
+</div>
+
+</body>
+</html>
